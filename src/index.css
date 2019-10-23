@@ -1,13 +1,140 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+* {
+    box-sizing: inherit;
+    color: #1b1b1b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media screen and (min-width: 600px) {
+    .container {
+        width: 600px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.app-title {
+    text-align: center;
+    font-size: 120%;
+    padding: 20px;
+    color: #f8f0f0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 8px;
+    background-color: #0a0a0a;
+}
+
+.box {
+    display: flex !important;
+    align-items: center;
+    padding: 10px;
+    border: solid 1px #dedede;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.has-background-grey-dark {
+    background-color: #868686;
+    border: solid 1px #f8f0f0 !important;
+}
+.song-title {
+    margin-left: 20px;
+}
+
+.controls {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.controls .buttons {
+    margin-top: 10px;
+}
+
+.controls .buttons button {
+    border: 1px solid #757373 !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #eeecec !important;
+    background-color: #555454 !important;
+    cursor: pointer;
+}
+.controls .buttons button:hover {
+    background-color: #3f3f3f !important;
+    color: #ffffff !important;
+}
+
+.controls .button {
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+.track-list {
+    background-color: #d3d3d3;
+    cursor: pointer;
+}
+
+.track-list button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    border: solid 1px #d3d3d3 !important;
+    background-color: #d1caca;
+    cursor: pointer;
+}
+
+.track-list button:hover {
+    background-color: #858282 !important;
+}
+
+.current-track {
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+    color: #0567b8;
+}
+
+.music-rights {
+    font-size: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.marquee {
+    width: 450px;
+    /* line-height: 10px; */
+    background-color: transparent;
+    color: #222121;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+    margin: 0;
+}
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
 }
